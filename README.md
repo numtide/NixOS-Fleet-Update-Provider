@@ -1,5 +1,7 @@
 # NixOS Fleet Update Provider
 
+**status**: bleeding edge, very unstable, may eat your kittens.
+
 This is a terraform provider aiming to manage updates for a homogeneous fleet of NixOS machines. By homogeneous, we mean machines sharing the same configuration. We originally designed this provider to update the nodes of a Kubernetes cluster.
 
 Provided a list of hostnames, their associated NixOS configurations, and a healthcheck script to perform, this provider updates the various hosts one by one. If the healthcheck fails on a host, the host configuration is rollbacked and the overall deployment canceled.
